@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Speaking Class Registration</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .form-control {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.375rem;
+            margin-top: 0.25rem;
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        .success-checkmark {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+            border-radius: 50%;
+            display: block;
+            stroke-width: 2;
+            stroke: #4bb71b;
+            stroke-miterlimit: 10;
+            box-shadow: inset 0px 0px 0px #4bb71b;
+            animation: fill .4s ease-in-out .4s forwards;
+        }
+        @keyframes fill {
+            100% {
+                box-shadow: inset 0px 0px 0px 30px #4bb71b;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-2xl mx-auto bg-white rounded-xl shadow-md overflow-hidden p-8">
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <svg class="w-16 h-16 mx-auto text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <h2 class="mt-6 text-3xl font-extrabold text-gray-900">Speak English with Confidence</h2>
+            <p class="mt-2 text-sm text-gray-600">Join our online speaking classes and improve your English fluency</p>
+        </div>
+
+        <!-- Registration Form -->
+        <div id="registrationForm">
+            <form id="signupForm" class="space-y-6">
+                <!-- Full Name -->
+                <div>
+                    <label for="username" class="block text-sm font-medium text-gray-700">Full Name</label>
+                    <input type="text" id="username" name="username" required
+                        class="form-control"
+                        placeholder="Enter your full name">
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <label for="contact" class="block text-sm font-medium text-gray-700">Email or Phone Number</label>
+                    <input type="text" id="contact" name="contact" required
+                        class="form-control"
+                        placeholder="Enter your email or phone number">
+                </div>
+
+                <!-- Gender -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Gender</label>
+                    <div class="mt-2 space-x-4">
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="gender" value="male" class="form-radio" required>
+                            <span class="ml-2">Male</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="gender" value="female" class="form-radio">
+                            <span class="ml-2">Female</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="gender" value="other" class="form-radio">
+                            <span class="ml-2">Other</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Age Group -->
+                <div>
+                    <label for="age" class="block text-sm font-medium text-gray-700">Age Group</label>
+                    <select id="age" name="age" required class="form-control">
+                        <option value="">Select your age group</option>
+                        <option value="13-17">13-17 years</option>
+                        <option value="18-24">18-24 years</option>
+                        <option value="25-34">25-34 years</option>
+                        <option value="35-44">35-44 years</option>
+                        <option value="45+">45+ years</option>
+                    </select>
+                </div>
+
+                <!-- Subscription -->
+                <div>
+                    <label for="subscription" class="block text-sm font-medium text-gray-700">Subscription Plan</label>
+                    <select id="subscription" name="subscription" required class="form-control">
+                        <option value="">Choose your subscription plan</option>
+                        <option value="monthly">Monthly Plan - $49.99/month</option>
+                        <option value="quarterly">Quarterly Plan - $129.99 ($43.33/month)</option>
+                        <option value="annual">Annual Plan - $449.99 ($37.50/month)</option>
+                    </select>
+                </div>
+
+                <!-- Submit Button -->
+                <div>
+                    <button type="submit"
+                        class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                        Register Now
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Success Message (Hidden by default) -->
+        <div id="successMessage" class="hidden text-center space-y-4">
+            <div class="success-checkmark mt-6 mb-6">
+                <svg class="w-16 h-16 mx-auto text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+            </div>
+            <h3 class="text-2xl font-semibold text-green-600">Registration Successful!</h3>
+            <p class="text-gray-600">Thank you for registering. We'll contact you shortly with your class details.</p>
+            <button onclick="resetForm()" 
+                class="mt-4 inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                Register Another Student
+            </button>
+        </div>
+
+        <!-- Footer -->
+        <div class="mt-8 text-center text-sm text-gray-500">
+            By registering, you agree to our Terms of Service and Privacy Policy
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Collect form data
+            const formData = {
+                username: document.getElementById('username').value,
+                contact: document.getElementById('contact').value,
+                gender: document.querySelector('input[name="gender"]:checked').value,
+                age: document.getElementById('age').value,
+                subscription: document.getElementById('subscription').value
+            };
+
+            // Log the data (in a real application, you would send this to your server)
+            console.log('Form submitted:', formData);
+
+            // Show success message
+            document.getElementById('registrationForm').style.display = 'none';
+            document.getElementById('successMessage').style.display = 'block';
+        });
+
+        function resetForm() {
+            // Reset the form
+            document.getElementById('signupForm').reset();
+            
+            // Show form, hide success message
+            document.getElementById('registrationForm').style.display = 'block';
+            document.getElementById('successMessage').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
