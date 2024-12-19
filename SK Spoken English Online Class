@@ -1,0 +1,309 @@
+# SK-Spoken-English-Online-Class
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SK Spoken English Classes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+
+        header {
+            background: #1a73e8;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .price-tag {
+            background: #4CAF50;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 10px 0;
+        }
+
+        .features {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .feature-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .feature-icon {
+            background: #e3f2fd;
+            color: #1a73e8;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background: #1a73e8;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1557b0;
+        }
+
+        .plans {
+            display: grid;
+            grid-gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .plan {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .plan h3 {
+            color: #1a73e8;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4CAF50;
+            margin: 10px 0;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            font-size: 35px;
+        }
+
+        .success-message {
+            display: none;
+            background: #4CAF50;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>SK Spoken English</h1>
+            <p>Master English Speaking Online</p>
+            <div class="price-tag">Starting at ₹499/month</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="features">
+            <div class="feature-item">
+                <div class="feature-icon">👩‍🏫</div>
+                <div>
+                    <h3>Expert Teachers</h3>
+                    <p>Learn from experienced trainers</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">👥</div>
+                <div>
+                    <h3>Small Batches</h3>
+                    <p>Maximum 5 students per batch</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">⏰</div>
+                <div>
+                    <h3>Flexible Timing</h3>
+                    <p>Morning & Evening batches</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="plans">
+            <div class="plan">
+                <h3>Basic Plan</h3>
+                <div class="price">₹499/month</div>
+                <p>8 Classes per month</p>
+            </div>
+            <div class="plan">
+                <h3>Premium Plan</h3>
+                <div class="price">₹999/month</div>
+                <p>12 Classes per month</p>
+            </div>
+            <div class="plan">
+                <h3>Pro Plan</h3>
+                <div class="price">₹1499/month</div>
+                <p>16 Classes per month</p>
+            </div>
+        </div>
+
+        <div class="success-message" id="successMessage">
+            Thank you for registering! We will contact you shortly.
+        </div>
+
+        <form id="registrationForm">
+            <h2 style="text-align: center; margin-bottom: 20px;">Register Now</h2>
+            
+            <div class="form-group">
+                <label for="name">Full Name*</label>
+                <input type="text" id="name" required placeholder="Enter your name">
+            </div>
+
+            <div class="form-group">
+                <label for="contact">Mobile Number/Email*</label>
+                <input type="text" id="contact" required placeholder="Enter mobile or email">
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender*</label>
+                <select id="gender" required>
+                    <option value="">Select gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age Group*</label>
+                <select id="age" required>
+                    <option value="">Select age group</option>
+                    <option value="13-17">13-17 years</option>
+                    <option value="18-24">18-24 years</option>
+                    <option value="25-34">25-34 years</option>
+                    <option value="35+">35+ years</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="plan">Select Plan*</label>
+                <select id="plan" required>
+                    <option value="">Choose your plan</option>
+                    <option value="basic">Basic Plan - ₹499/month (8 Classes)</option>
+                    <option value="premium">Premium Plan - ₹999/month (12 Classes)</option>
+                    <option value="pro">Pro Plan - ₹1499/month (16 Classes)</option>
+                </select>
+            </div>
+
+            <button type="submit">Register Now</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>📞 Call/WhatsApp: +91 1234567890</p>
+            <p>📧 Email: info@skenglish.com</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/911234567890" class="whatsapp-button">💬</a>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const successMessage = document.getElementById('successMessage');
+            successMessage.style.display = 'block';
+            this.reset();
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
